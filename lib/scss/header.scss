@@ -1,0 +1,172 @@
+@charset "UTF-8";
+
+//____________________________
+//読み込み
+//____________________________
+@import "configuration";
+
+
+//____________________________
+//ヘッダー
+//____________________________
+
+.l--header {
+  width: 100%;
+  padding-top: .8rem;
+  padding-bottom: .8rem;
+  position: fixed;
+  top: 0;
+  z-index: 980;
+  background-color: $menu-color;
+
+  .inner {
+    position: relative;
+  }
+
+  .logo {
+    width: 200px;
+
+    img {
+      vertical-align: top;
+    }
+  }
+
+  //ハンバーガーメニューのボタン
+  &--button {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .p--hamburger {
+    position: absolute;
+    top: 0;
+    right: 1.6rem;
+    width: 41px;
+    height: 41px;
+    margin: auto;
+    border-radius: 50%;
+    border: 1px solid $menu-bg;
+    background-color: $white;
+    outline: none;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    z-index: 1000;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 .5rem rgba(255, 255, 255, .5);
+    }
+
+    &__line {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      width: 18px;
+      height: 2px;
+      background-color: $menu-bg;
+      -webkit-transition: inherit;
+      transition: inherit;
+
+      &:before,
+      &:after {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: inherit;
+        content: '';
+        -webkit-transition: inherit;
+        transition: inherit;
+      }
+
+      &:before {
+        top: -5px;
+      }
+
+      &:after {
+        top: 5px;
+      }
+    }
+
+    &[aria-expanded="true"] .p--hamburger__line {
+      background-color: transparent;
+    }
+
+    &[aria-expanded="true"] .p--hamburger__line:before,
+    &[aria-expanded="true"] .p--hamburger__line:after {
+      top: 0;
+      -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      background-color: $menu-bg;
+    }
+
+    &[aria-expanded="true"] .p--hamburger__line:before {
+      top: 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+
+  .u--visuallyHidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
+
+  //ハンバーガーメニューの設定
+  .gnav {
+    background: $menu-bg;
+    display: none;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 980;
+    top: 0;
+    left: 0;
+
+    &__wrap {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      position: absolute;
+      width: 100%;
+      z-index: 980;
+    }
+
+    &__menu {
+      &__item {
+        font-size: 3.2rem;
+
+        li{
+        margin-bottom: .8rem;
+        }
+
+        a {
+          color: $menu-color;
+        }
+      }
+    }
+  }
+}
