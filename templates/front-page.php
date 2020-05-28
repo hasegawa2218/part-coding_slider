@@ -9,6 +9,9 @@
 
 get_header(); ?>
 <!--loading-->
+<div style="height:500px;width:100%;">
+<a href="/slider">slider</a>
+<!-- ページ自体が止まってないか確認するために一時的に追加 --></div>
 <section style="position: relative;height:100vh;">
   <div class="top-slide_img_test" style="height:100vh;position:absolute;z-index:0;">
     <div class="test_img"></div>
@@ -19,7 +22,6 @@ get_header(); ?>
   <div class="top-slide_img_test" style="height:100vh;position:absolute;z-index:0;">
     <div class="test_img"></div>
   </div>
-
 
   <div class="top-slider_btn">
     <div class="top-slider_btn_left slider-btn"><i class="fas fa-chevron-left"></i></div>
