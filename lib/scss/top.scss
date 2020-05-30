@@ -26,42 +26,6 @@ position: relative;
   }
 }
 // テストコード
-.test_img{
-  padding-top: 37%;
-  width: 60vw;
-  min-width: 480px;
-  height: 0;
-  margin-left: auto;
-  align-self: center;
-  position: relative;
-  left: 10px;
-  // ここで動かす
-  &1{
-    background: url("../../../../uploads/img/slideimg-1.png") center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  &2{
-    background: url("../../../../uploads/img/slideimg-2.jpg") center center;  
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  &3{
-    background: url("../../../../uploads/img/slideimg-3.png") center center;  
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-}
-.top-slide_img_test:nth-child(2),.top-slide_img_test:nth-child(3){
-  clip-path: inset(0 100% 0 0);
-  &>.test_img{
-    display: none;
-  }
-}
-
-.top-slide_img_test{
-
-}
 
 
 
@@ -123,31 +87,34 @@ position: relative;
       background-repeat: no-repeat;
     }
     &_item{
-      position: absolute;
-      right: 10vw;
-      left: 30vw;
-      bottom: 20%;
-      width: 50%;
       z-index: 1000;
+      width: 60vw;
       height: 0;
+      margin-left: auto;
+      margin-right: 3rem;
+      align-self: center;
       &_1{
         background: url("../../../../uploads/img/slideimg-1.png") center center;
         background-size: cover;
         background-repeat: no-repeat;
-        padding-top: 31%;
+        padding-top: 37%;
       }
       &_2{
         background: url("../../../../uploads/img/slideimg-2.jpg") center center;
         background-size: cover;
         background-repeat: no-repeat;
-        padding-top: 37.5%;
+        padding-top: 44.5%;
       }
       &_3{
         background: url("../../../../uploads/img/slideimg-3.png") center center;
         background-size: cover;
         background-repeat: no-repeat;
-        padding-top: 38%;
+        padding-top: 44%;
       }
     }
   }
+}
+.aaa{
+  // right: 20px;
+      // ここで動かす
 }

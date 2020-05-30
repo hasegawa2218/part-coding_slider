@@ -18,12 +18,12 @@ get_header(); ?>
   </div>
   <div class="top-slide_img_brown slide" style="width:100vw;height:100vh;position:absolute;z-index:0;">
     <div class="aaa" style="position:relative;width:100%;height:100%;display:flex;">
-        <div class="top-slide_img_item top-slide_img_item_2"></div>
+        <div style="display:none;" class="top-slide_img_item top-slide_img_item_2"></div>
     </div>
   </div>
   <div class="top-slide_img_brown slide" style="width:100vw;height:100vh;position:absolute;z-index:0;">
     <div class="aaa" style="position:relative;width:100%;height:100%;display:flex;">
-        <div class="top-slide_img_item top-slide_img_item_3"></div>
+        <div style="display:none;" class="top-slide_img_item top-slide_img_item_3"></div>
     </div>
   </div>
 
