@@ -30,26 +30,32 @@ position: relative;
 
 
 
-.top-slider_btn{
-  z-index: 10;
-  // z-index
-  background-color: $white;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  max-width: 300px;
-  max-height: 160px;
-  min-width: 240px;
-  min-height: 120px;
-  width: 18.8vw;
-  height: 10vw;
-  &_right,&_left{
-    width: 100px;
-    height: 100px;
+.top-slider{
+  &_btn{
+    z-index: 10;
+    background-color: $white;
+    position: absolute;
+    right: 0;
+    bottom: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    max-width: 300px;
+    max-height: 160px;
+    min-width: 240px;
+    min-height: 120px;
+    width: 18.8vw;
+    height: 10vw;
+    &_right,&_left{
+      width: 100px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &_text{
+    h2,p,div{
+      color: $white;
+    }
   }
 }
 
@@ -91,23 +97,24 @@ position: relative;
       width: 60vw;
       height: 0;
       margin-left: auto;
-      margin-right: 3rem;
+      margin-right: 2rem;
+      right: 3%;
       align-self: center;
       &_1{
         background: url("../../../../uploads/img/slideimg-1.png") center center;
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;
         padding-top: 37%;
       }
       &_2{
         background: url("../../../../uploads/img/slideimg-2.jpg") center center;
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;
         padding-top: 44.5%;
       }
       &_3{
         background: url("../../../../uploads/img/slideimg-3.png") center center;
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;
         padding-top: 44%;
       }
@@ -116,5 +123,8 @@ position: relative;
 }
 .aaa{
   // right: 20px;
-      // ここで動かす
+  // ここで動かす
+  height: 100vh;
+  
 }
+
