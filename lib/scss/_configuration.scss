@@ -24,6 +24,8 @@ $msp: "only screen and (max-width:321px)";
 $sp: "only screen and (max-width:480px)";
 $tab: "only screen and (min-width:481px) and (max-width:766px)";
 $pc: "only screen and (min-width:767px)";
+$slide-tab-min:"only screen and (max-width:676px)";
+$slide-tab-max:"only screen and (min-width:677px) and (max-width:766px)";
 
 
 //____________________________
@@ -39,7 +41,7 @@ $breakpoint-min: ('sp': 'screen and (min-width: 0px)',
 // max-widthの変数定義
 $breakpoint-max: ('sp': 'screen and (max-width: 480px)',
   'tab': 'screen and (max-width: 766px)',
-  'pc': 'screen and (max-width: 1280px)',
+  'pc': 'screen and (max-width: 1080px)',
 ) !default;
 
 // min-widthのmixin定義

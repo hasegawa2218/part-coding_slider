@@ -24,9 +24,18 @@
     min-height: 120px;
     width: 18.8vw;
     height: 10vw;
+    @media #{$tab},#{$sp} {
+      min-height: 80px;
+      min-width: 150px;
+    }
+    .fa-chevron-left,.fa-chevron-right{
+      @media #{$tab},#{$sp} {
+        font-size: 0.7em;
+      }
+    }
     &_right,&_left{
-      width: 100px;
-      height: 100px;
+      width: 50%;
+      height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -61,6 +70,14 @@
       mix-blend-mode: overlay;
       z-index: -1;
       content: '';
+      @media #{$slide-tab-max}{
+        background-size: 66px;
+        min-height: 850px;
+      }
+      @media #{$slide-tab-min},#{$sp} {
+        background-size: 66px;
+        height: 100vh;
+      }
     }
   }
   &_violet{
@@ -78,37 +95,66 @@
 //スライダーの右のアイテム
 //____________________________
   &_item{
-    z-index: 100;
-    width: 60vw;
-    height: 0;
-    margin-left: auto;
-    margin-right: 2rem;
-//アニメーションするためにrightをかけてある
-    right: -10%;
-    align-self: center;
-    display:none;
-    position: absolute;
-    &_1{
-      display: block;
-      right: 0%;
-      background: url("../../../../uploads/img/slideimg-1.png") center center;
-      background-size: contain;
-      background-repeat: no-repeat;
-      padding-top: 37%;
+    right: 30px;
+    @media #{$tab},#{$sp} {
+     right: 0;
     }
-    &_2{
-      background: url("../../../../uploads/img/slideimg-2.jpg") center center;
-      background-size: contain;
-      background-repeat: no-repeat;
-      padding-top: 44.5%;
-    }
-    &_3{
-      background: url("../../../../uploads/img/slideimg-3.png") center center;
-      background-size: contain;
-      background-repeat: no-repeat;
-      padding-top: 44%;
+    &_style{
+      z-index: 100;
+      width: 60vw;
+      height: 0;
+      @media #{$tab},#{$sp} {
+        width: 90vw;
+        bottom: 5%;
+        margin:0 5%;
+      }
+      
+  //アニメーションするためにrightをかけてある
+      right: -10%;
+      align-self: center;
+      display:none;
+      position: absolute;
+      &_1{
+        display: block;
+        right: 0%;
+        background: url("../../../../uploads/img/slideimg-1.png") center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding-top: 37%;
+        @media #{$tab},#{$sp} {
+          padding-top: 55%;
+        }
+      }
+      &_2{
+        background: url("../../../../uploads/img/slideimg-2.jpg") center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding-top: 44.5%;
+        @media #{$tab},#{$sp} {
+          padding-top: 65%;
+        }
+      }
+      &_3{
+        background: url("../../../../uploads/img/slideimg-3.png") center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding-top: 44%;
+        @media #{$tab},#{$sp} {
+          padding-top: 65%;
+        }
+      }
     }
   }
 }
+}
+
+.js_wiper,.top-slide_img_item{
+  min-height: 100vh;
+  @media #{$slide-tab-max}{
+    min-height: 850px;
+  }
+  @media #{$slide-tab-min},#{$sp} {
+    height: 100vh;
+  }
 }
 
