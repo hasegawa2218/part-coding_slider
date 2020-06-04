@@ -10,27 +10,7 @@
 //トップページ
 //____________________________
 
-.slidesWrap{
-position: relative;
-
-  .slides{
-    position: relative;
-    .slide{
-      width: 100vw;
-      height: 100vh;
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0;
-    }
-  }
-}
-// テストコード
-
-
-
-
-.top-slider{
+.top-slide{
   &_btn{
     z-index: 10;
     background-color: $white;
@@ -53,78 +33,82 @@ position: relative;
     }
   }
   &_text{
+    position:relative;
+    display:flex;
+    z-index:100;
+    flex-direction:column;
     h2,p,div{
       color: $white;
     }
   }
-}
-
-
-
-.top-slide{
-  &_img{
-    &_violet,&_brown,&_test{
-      width: 100vw;
-      background-position: center;
-      &:after{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        background: url("../scss/top-slide_bg_pattern.png") repeat center;
-        background-size: 134px;
-        mix-blend-mode: overlay;
-        z-index: -1;
-        content: '';
-      }
+//____________________________
+//スライダー背景
+//____________________________
+&_img{
+  &_violet,&_brown{
+    width: 100vw;
+    background-position: center;
+    &:after{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background: url("../scss/top-slide_bg_pattern.png") repeat center;
+      background-size: 134px;
+      mix-blend-mode: overlay;
+      z-index: -1;
+      content: '';
     }
-    &_violet,&_test{
-      background: url("../scss/top-slide_bg_violet.jpg") center center;
-      background-size: cover;
+  }
+  &_violet{
+    background: url("../scss/top-slide_bg_violet.jpg") center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  }
+  &_brown{
+    background: url("../scss/top-slide_bg_brown.jpg") center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+//____________________________
+//スライダーの右のアイテム
+//____________________________
+  &_item{
+    z-index: 100;
+    width: 60vw;
+    height: 0;
+    margin-left: auto;
+    margin-right: 2rem;
+//アニメーションするためにrightをかけてある
+    right: -10%;
+    align-self: center;
+    display:none;
+    position: absolute;
+    &_1{
+      display: block;
+      right: 0%;
+      background: url("../../../../uploads/img/slideimg-1.png") center center;
+      background-size: contain;
       background-repeat: no-repeat;
-
+      padding-top: 37%;
     }
-    &_brown{
-      background: url("../scss/top-slide_bg_brown.jpg") center center;
-      background-size: cover;
+    &_2{
+      background: url("../../../../uploads/img/slideimg-2.jpg") center center;
+      background-size: contain;
       background-repeat: no-repeat;
+      padding-top: 44.5%;
     }
-    &_item{
-      z-index: 1000;
-      width: 60vw;
-      height: 0;
-      margin-left: auto;
-      margin-right: 2rem;
-      right: 3%;
-      align-self: center;
-      &_1{
-        background: url("../../../../uploads/img/slideimg-1.png") center center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        padding-top: 37%;
-      }
-      &_2{
-        background: url("../../../../uploads/img/slideimg-2.jpg") center center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        padding-top: 44.5%;
-      }
-      &_3{
-        background: url("../../../../uploads/img/slideimg-3.png") center center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        padding-top: 44%;
-      }
+    &_3{
+      background: url("../../../../uploads/img/slideimg-3.png") center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      padding-top: 44%;
     }
   }
 }
-.aaa{
-  // right: 20px;
-  // ここで動かす
-  height: 100vh;
-  
 }
 
