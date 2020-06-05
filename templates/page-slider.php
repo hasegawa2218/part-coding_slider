@@ -9,20 +9,20 @@
 
 get_header(); ?>
 <!--content-->
-<section class="slideWrap js_wiper" style="position: relative;height:auto;">
+<section class="slideWrap js_wiper" style="position: relative;">
 <div class="slides">
-  <div class="top-slide_img_violet slide" style="width:100vw;height:auto;position:absolute;">
-    <div class="top-slide_img_item" style="position:relative;width:100%;height:100%;display:flex;">
+  <div class="top-slide_img_violet slide" style="position: absolute;">
+    <div class="top-slide_img_item">
         <div class="top-slide_img_item_style top-slide_img_item_style_1"></div>
     </div>
   </div>
-  <div class="top-slide_img_brown slide" style="width:100vw;height:auto;position:absolute;z-index:0;">
-    <div class="top-slide_img_item" style="position:relative;width:100%;height:100%;display:flex;">
+  <div class="top-slide_img_brown slide" style="z-index:0;position: absolute;">
+    <div class="top-slide_img_item">
         <div class="top-slide_img_item_style top-slide_img_item_style_2"></div>
     </div>
   </div>
-  <div class="top-slide_img_brown slide" style="width:100vw;height:auto;position:absolute;z-index:0;">
-    <div class="top-slide_img_item" style="position:relative;width:100%;height:100%;display:flex;">
+  <div class="top-slide_img_brown slide" style="z-index:0;position: absolute;">
+    <div class="top-slide_img_item">
         <div class="top-slide_img_item_style top-slide_img_item_style_3"></div>
     </div>
   </div>

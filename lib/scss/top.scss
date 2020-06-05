@@ -9,6 +9,15 @@
 //____________________________
 //トップページ
 //____________________________
+.js_wiper,.top-slide_img_item{
+  min-height: 100vh;
+  @media #{$slide-tab-max}{
+    min-height: 950px;
+  }
+  @media #{$slide-tab-min},#{$sp} {
+    height: 100vh;
+  }
+}
 
 .top-slide{
   &_btn{
@@ -33,25 +42,84 @@
         font-size: 0.7em;
       }
     }
+    &_right:hover{
+      transform: translateX(0.25em);
+    }
+    &_left:hover{
+      transform: translateX(-0.25em);
+    }
     &_right,&_left{
       width: 50%;
       height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: all 0.15s ease 0s;
     }
   }
   &_text{
-    position:relative;
+    position: absolute;
     display:flex;
     z-index:100;
     flex-direction:column;
+    left: 15%;
+    top: 32%;
+    @media #{$slide-tab-max},#{$slide-tab-min},#{$sp}{
+      top: 10%;
+      left: 5%;
+      right: 5%;
+      text-align: center;
+    }
+    @media #{$slide-tab-min},#{$sp}{
+      top: 12%;
+    }
+    &_heading_1,&_heading_2{
+      font-weight: 1000;
+      font-size: 3.5rem;
+      line-height: 50px;
+      letter-spacing: 5px;
+      padding-top: 8px;
+      @media #{$slide-tab-max}{
+        font-size: 10rem;
+        line-height: 1;
+      }
+      @media #{$slide-tab-min},#{$sp}{
+        padding-top: 30px;
+        font-size: 5.5rem;
+        letter-spacing: 11px;
+      }
+    }
+    &_heading_2{
+      font-size: 5rem;
+      letter-spacing: 10px;
+      @media #{$slide-tab-max}{
+        font-size: 11.5rem;
+        letter-spacing: 28px;
+        padding-left: 20px;
+      }
+      @media #{$slide-tab-min},#{$sp}{
+        font-size: 8rem;
+        letter-spacing: 20px;
+        padding-left: 12px;
+      }
+    }
+    &_p{
+      padding-top: 15px;
+      font-family: 游明朝体, YuMincho, 游明朝, YuMincho, "Noto Serif JP", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "ＭＳ 明朝", serif;
+      font-size: 2.2rem;
+      line-height: 1.5;
+      @media #{$slide-tab-max},#{$slide-tab-min},#{$sp}{
+        display: none;
+      }
+    }
     h2,p,div{
       color: $white;
     }
+
+    
   }
 //____________________________
-//スライダー背景
+//スライダー背景_img
 //____________________________
 &_img{
   &_violet,&_brown{
@@ -72,7 +140,7 @@
       content: '';
       @media #{$slide-tab-max}{
         background-size: 66px;
-        min-height: 850px;
+        min-height: 950px;
       }
       @media #{$slide-tab-min},#{$sp} {
         background-size: 66px;
@@ -92,9 +160,13 @@
     background-repeat: no-repeat;
   }
 //____________________________
-//スライダーの右のアイテム
+//スライダーの右のアイテム_item
 //____________________________
   &_item{
+    position:relative;
+    width:100%;
+    height:100%;
+    display:flex;
     right: 30px;
     @media #{$tab},#{$sp} {
      right: 0;
@@ -105,10 +177,9 @@
       height: 0;
       @media #{$tab},#{$sp} {
         width: 90vw;
-        bottom: 5%;
+        bottom: 0;
         margin:0 5%;
       }
-      
   //アニメーションするためにrightをかけてある
       right: -10%;
       align-self: center;
@@ -146,15 +217,5 @@
     }
   }
 }
-}
-
-.js_wiper,.top-slide_img_item{
-  min-height: 100vh;
-  @media #{$slide-tab-max}{
-    min-height: 850px;
-  }
-  @media #{$slide-tab-min},#{$sp} {
-    height: 100vh;
-  }
 }
 
