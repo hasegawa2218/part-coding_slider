@@ -4,6 +4,7 @@
 //読み込み
 //____________________________
 @import "configuration";
+// プレフィックスとクラス整理
 
 
 //____________________________
@@ -24,15 +25,16 @@
     z-index: 10;
     background-color: $white;
     position: absolute;
+    max-width: 300px;
+    width: 18.8vw;
+    height: 10vw;
     right: 0;
     bottom: 0;
     display: flex;
-    max-width: 300px;
     max-height: 160px;
     min-width: 240px;
     min-height: 120px;
-    width: 18.8vw;
-    height: 10vw;
+
     @media #{$tab},#{$sp} {
       min-height: 80px;
       min-width: 150px;
